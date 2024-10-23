@@ -219,7 +219,10 @@ button:hover {
     text-align: right;
     margin-left: 5px;
     font-size: 25px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
 }
 #toggleLanguageBtn:hover {
-    transform: scale(1.10);
+    transform: scale(1.20);
+    
 }

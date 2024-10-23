@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     background-color: #fefae0;
     margin: 0;
     padding: 20px;
@@ -27,8 +26,9 @@ body {
 }
 
 #polish-sentence {
-    font-size: 24px;
+    font-size: 30px;
     margin: 20px 0;
+    font-weight: bold;
 }
 
 #user-input {
@@ -55,12 +55,12 @@ button {
     cursor: pointer;
     border-radius: 4px;
     border: none;
-    background-color: rgb(105, 129, 181);
+    background-color: #e4f378;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #e3dfdf;
+    background-color: #dc9966;
     transform: scale(1.02);
 }
 
@@ -85,15 +85,59 @@ button:hover {
 }
 
 #next-btn {
-    color: #05715a;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    background-color: #02c39a;
+    color: #05715a;;
+    background-color: #fff;
+    margin-top: 20px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    border-radius: 5px; /* Dodanie zaokrąglenia rogów */
 
 }
 
+#next-btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #05715a;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 5px;
+}
+
+
+#next-btn:hover:before, #next-btn:focus:before, #next-btn:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+
 #next-btn:hover {
+    color: #f9f9f9;
+    
 }
 
 nav {

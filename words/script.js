@@ -1159,6 +1159,7 @@ const optionsContainer = document.getElementById('optionsContainer');
 const scoreDisplay = document.getElementById('score');
 const translationDisplay = document.getElementById('translationDisplay');
 const toggleTranslationBtn = document.getElementById('toggleTranslationBtn');
+const switchLanguageBtn = document.getElementById('switchLanguageBtn');
 
 function displayWord() {
     if (currentIndex < words.length) {
@@ -1226,9 +1227,6 @@ submitBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
     currentIndex++;
-    if (currentIndex % 2 === 0) {
-        isEnglishToPolish = !isEnglishToPolish; // Toggle the direction after every two words
-    }
     displayWord();
 });
 
@@ -1245,5 +1243,14 @@ function updateTranslationDisplay() {
         translationDisplay.textContent = '';
     }
 }
+
+switchLanguageBtn.addEventListener('click', () => {
+    isEnglishToPolish = !isEnglishToPolish; // Toggle the language direction
+    displayWord(); // Refresh the displayed word
+});
+
+// document.getElementById('options').addEventListener('click', function() {
+//     this.style.backgroundColor = 'red';
+// });
 
 displayWord();
