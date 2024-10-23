@@ -1,15 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafbfa;
-    margin: 0;
-    padding: 20px;
     font-family: "Lato";
+    margin: 0;
+    font-family: "Lato";
+    padding: 20px;
+    background-color: #fefae0;
 }
 
 nav {
-    background-color: #333;
-    color: white;
-    padding: 1em;
+    background-color: #fefae0;
+    color: rgb(32, 31, 31);
+    margin: 5px;
     border-radius: 6px;
     text-align: center;
 }
@@ -29,7 +29,7 @@ nav {
 }
 
 .menu a {
-    color: white;
+    color: rgb(32, 31, 31);
     text-decoration: none;
 }
 
@@ -48,10 +48,16 @@ section {
     }
 }
 
+#userInput {
+    border-radius: 5px;
+    border: none;
+}
+
 .container {
     margin-top: 10px;
-    background: rgb(239, 235, 235);
-    padding: 20px;
+    background-color: #02c39a;
+    padding: 10px;
+    margin: 220px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -74,14 +80,18 @@ button {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    background-color: #007bff;
+    background-color: #d2cdcd;
     color: white;
     border-radius: 5px;
     margin-top: 10px;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(243, 244, 246);
+    transform: scale(1.02);
 }
 
 .options {
@@ -89,28 +99,127 @@ button:hover {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .option {
-    background-color: #007bff;
-    color: white;
+    background-color: #e4f378;
+    color: rgb(6, 6, 6);
     padding: 10px;
     margin: 5px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
 }
 
 .option:hover {
-    background-color: #0056b3;
+    background-color: #dc9966;
+    transform: scale(1.02);
 }
 
 .result {
     margin-top: 20px;
     font-weight: bold;
+    color: #fdfcfc;
+    font-size: 30px;
+    padding-bottom: 15px;
 }
 
-#nextBtn {
+/* #nextBtn {
     text-align: center;
     margin: auto;
+    color: #05715a;
     background-color: #02c39a;
+    padding-top: 15px;
+
+} */
+
+#nextBtn {
+    color: #05715a;;
+    background-color: #fff;
+    margin-top: 20px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    border-radius: 5px; /* Dodanie zaokrąglenia rogów */
+}
+
+#nextBtn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #05715a;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 5px;
+}
+
+
+#nextBtn:hover:before, #nextBtn:focus:before, #nextBtn:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+
+
+#nextBtn:hover {
+    color: #f9f9f9;
+    
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+    }
+}
+
+#checkBtn {
+    color: #05715a;
+    background-color: #02c39a;
+}
+
+.phrase {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#toggleTranslationBtn {
+    color: #05715a;
+    background-color: #02c39a;
+}
+
+
+
+#toggleLanguageBtn {
+    color: #e0ab48;
+    background-color: #02c39a;
+    text-align: right;
+    margin-left: 5px;
+    font-size: 25px;
+}
+#toggleLanguageBtn:hover {
+    transform: scale(1.10);
 }

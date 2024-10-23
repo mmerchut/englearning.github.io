@@ -1,0 +1,104 @@
+body {
+    font-family: "Lato";
+    background-color: #fefae0;
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    background-color: #fefae0;
+    color: rgb(20, 19, 19);
+    padding: 1em;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.menu h1 {
+    margin: 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu a {
+    color: rgb(20, 19, 19);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    width: 20%;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tile1, .tile2, .tile3 {
+    background-color: #02c39a; /* Background color */
+    color: white; /* Text color */
+    padding: 20px;
+    margin: 40px;
+    flex: 1 1 100px; /* Responsive sizing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold;
+    min-height: 100px;
+}
+
+.tile2 {
+    background-color: #bbc033; /* Background color */
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 20px;
+    margin: 40px;
+    flex: 1 1 100px; /* Responsive sizing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold;
+    min-height: 100px;
+}
+
+.tile3 {
+    background-color: #f59065; /* Background color */
+    color: white; /* Text color */
+    padding: 20px;
+    margin: 40px;
+    flex: 1 1 100px; /* Responsive sizing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold;
+    min-height: 100px;
+}
+
+@media (max-width: 600px) {
+    .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .tile {
+        margin: 5px;
+    }
+}

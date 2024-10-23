@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fafbfa;
+    background-color: #fefae0;
     margin: 0;
     padding: 20px;
     font-family: "Lato";
@@ -19,9 +19,11 @@ body {
 }
 
 #score-board {
+    text-align: left;
     font-size: 20px;
     color: #f8f8f8;
     font-weight: bold;
+    display: none;
 }
 
 #polish-sentence {
@@ -47,43 +49,56 @@ input[type="text"] {
 }
 
 button {
+    transition: transform 0.2s ease;
     padding: 10px 15px;
-    margin-right: 10px;
+    margin: 5px;
     cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(105, 129, 181);
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e3dfdf;
+    transform: scale(1.02);
 }
 
 #result {
     margin-top: 10px;
     font-size: 18px;
+    color: rgb(201, 221, 89);
+    font-weight: bold;
 }
 
 #check-btn {
-    background-color: #05668D;
     border: none;
     border-radius: 4px;
     font-weight: bold;
-    color: #f9f9f9;
+    color: #05715a;
+    margin: 2px;
+    background-color: #02c39a;
 }
 
 #check-btn:hover {
-    background-color: #669bcb;
+
 }
 
 #next-btn {
-    background-color: #050505;
-    color: #f9f9f9;
+    color: #05715a;
     border: none;
     border-radius: 4px;
     font-weight: bold;
+    background-color: #02c39a;
+
 }
 
 #next-btn:hover {
-    background-color: #272828;
 }
 
 nav {
-    background-color: #333;
-    color: white;
+    background-color: #fefae0;
+    color: rgb(20, 19, 19);
     padding: 1em;
     border-radius: 6px;
     text-align: center;
@@ -104,7 +119,7 @@ nav {
 }
 
 .menu a {
-    color: white;
+    color: rgb(20, 19, 19);
     text-decoration: none;
 }
 
@@ -121,5 +136,35 @@ section {
         display: block;
         margin: 10px 0;
     }
+    .container {
+        margin: 20px;
+    }
 }
+
+#type-info {
+    display: none; /* Ukrywa opis domyślnie */
+    background-color: #eaeff2;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#tense-info {
+    display: none;
+}
+
+#building-rule {
+
+    border-radius: 5px;
+}
+
+#toggle-description-btn {
+    background-color: #02c39a;
+    font-weight: bold;
+    color: #05715a;
+}
+
+
+
+
 

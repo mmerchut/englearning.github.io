@@ -1148,6 +1148,7 @@ let currentIndex = 0;
 let currentWord;
 let isEnglishToPolish = true;
 let score = 0;
+let translationVisible = false;
 
 const wordDisplay = document.getElementById('wordDisplay');
 const userInput = document.getElementById('userInput');
@@ -1156,6 +1157,8 @@ const result = document.getElementById('result');
 const nextBtn = document.getElementById('nextBtn');
 const optionsContainer = document.getElementById('optionsContainer');
 const scoreDisplay = document.getElementById('score');
+const translationDisplay = document.getElementById('translationDisplay');
+const toggleTranslationBtn = document.getElementById('toggleTranslationBtn');
 
 function displayWord() {
     if (currentIndex < words.length) {
@@ -1170,6 +1173,7 @@ function displayWord() {
         }
         userInput.value = '';
         result.textContent = '';
+        updateTranslationDisplay();
     } else {
         wordDisplay.textContent = 'Koniec słówek!';
         submitBtn.disabled = true;
@@ -1227,5 +1231,19 @@ nextBtn.addEventListener('click', () => {
     }
     displayWord();
 });
+
+toggleTranslationBtn.addEventListener('click', () => {
+    translationVisible = !translationVisible;
+    updateTranslationDisplay();
+});
+
+function updateTranslationDisplay() {
+    if (translationVisible) {
+        const correctTranslation = isEnglishToPolish ? words[currentIndex].polish : words[currentIndex].english;
+        translationDisplay.textContent = correctTranslation;
+    } else {
+        translationDisplay.textContent = '';
+    }
+}
 
 displayWord();
