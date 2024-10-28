@@ -11,19 +11,25 @@
 </head>
 <body>
 
-    <nav>
-        <div class="menu">
-            <h1>Angielski - Czasy</h1>
-            <ul>
-                <li><a href="words/index.html">Słownictwo</a></li>
-                <li><a href="Phrases/index.html">Zwroty</a></li>
-                <li><a href="index.html">Czasy</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <!-- <div id="score-board"><span id="score"></span></div> -->
-        <button id="toggle-description-btn">Pokaż opis</button>
+    <header>
+        <input id="burger" type="checkbox" />
+        <label for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul>
+            <li><a href="../menu/index.html">Strona główna</a></li>
+            <li><a href="index.html">Czasy Ang</a></li>
+            <li><a href="../words/WordsMenu/index.html">Słownictwo</a></li>
+            <li><a href="../Phrases/index.html">Zwroty</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="container"> 
+        <div id="score-board"><span id="score"></span></div>
+         <button id="toggle-description-btn">Pokaż opis</button>
         <p id="polish-sentence"></p>
         <p id="tense-info"></p>
         <p id="type-info"></p> 
@@ -31,11 +37,8 @@
         <button id="check-btn">Sprawdź</button>
         <button id="next-btn">Następne zdanie</button>
         <p id="result"></p>
-        <p id="building-rule">Zasada budowania zdania</p> 
-    </div>
-
-
-    
+        <p id="building-rule">Zasada budowania zdania</p>  
+     </div>
 
    
     <script src="script.js"></script>

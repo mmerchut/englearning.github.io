@@ -2732,6 +2732,8 @@ function generateOptions(correctForm) {
 }
 
 function displayNewSentence() {
+
+    
     currentSentence = getRandomSentence();
     hasAttempted = false;
     
@@ -2760,6 +2762,7 @@ function displayNewSentence() {
         container.removeChild(existingOptionsContainer);
     }
     container.appendChild(optionsContainer);
+    
 }
 
 function checkAnswer() {
@@ -2809,3 +2812,4 @@ document.getElementById("toggle-description-btn").addEventListener("click", togg
 
 // Initialization
 displayNewSentence();
+

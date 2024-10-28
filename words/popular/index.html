@@ -12,16 +12,22 @@
 </head>
 <body>
 
-    <nav>
-        <div class="menu">
-            <h1>Angielski - Słownictwo</h1>
-            <ul>
-                <li><a href="index.html">Słownictwo</a></li>
-                <li><a href="../Phrases/index.html">Zwroty</a></li>
-                <li><a href="../index.html">Czasy</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <input id="burger" type="checkbox" />
+        <label for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul>
+            <li><a href="../../menu/index.html">Strona główna</a></li>
+            <li><a href="../../tenses/index.html">Czasy Ang</a></li>
+            <li><a href="index.html">Słownictwo</a></li>
+            <li><a href="../../Phrases/index.html">Zwroty</a></li>
+          </ul>
+        </nav>
+      </header>
 
     <div class="container">
         <div class="quiz-box">
@@ -33,7 +39,19 @@
             <button id="submitBtn" class="btn">Sprawdź</button>
             <button id="nextBtn" class="btn">Następne słówko</button>
             <div id="result" class="result"></div>
+            <button id="hideButton"><i class="fa-regular fa-lightbulb"></i></button>
+            <div id="wordSelectContainer">
+                <div><H3 class="word-select">Wybierz ilość słówek do nauki:</H3></div>
+                <button class="word-select-btn" data-count="10">10 </button>
+                <button class="word-select-btn" data-count="25">25 </button>
+                <button class="word-select-btn" data-count="50">50 </button>
+                <button class="word-select-btn" data-count="100">100 </button>
+                <button class="word-select-btn" data-count="250">250 </button>
+                <button class="word-select-btn" data-count="500">500</button>
+                <button class="word-select-btn" data-count="all">Wszystkie</button>
+            </div>
         </div>
+        
     </div>
     <script src="script.js"></script>
 </body>
