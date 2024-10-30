@@ -305,8 +305,7 @@ label:hover {
   border: none;
   background-color: #02c39a;
   font-weight: bold;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+
 }
 
 #toggleTranslationBtn:hover {
@@ -404,6 +403,44 @@ label:hover {
         transition: 0.2s;
       }
   }
+
+  .btn-red {
+    background-color: rgb(235, 43, 43) !important; /* Zmieniony kolor tła */
+    color: rgb(114, 30, 30) !important; /* Kolor tekstu na biały */
+} 
+
+.shake {
+    animation: shake 0.5s ease;
+    background-color: rgb(235, 43, 43); /* Zmieniony kolor tła */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.btn-yellow {
+  background-color: rgb(39, 192, 62) !important; /* Kolor tła na żółty */
+  color: rgb(255, 255, 255) !important; /* Kolor tekstu na czarny */
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
+.bounce {
+  animation: bounce 0.5s ease;
+  background-color: rgb(39, 192, 62);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+}
 
 
 

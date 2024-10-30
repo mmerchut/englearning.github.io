@@ -407,7 +407,7 @@ label:hover {
   .btn-red {
     background-color: rgb(235, 43, 43) !important; /* Zmieniony kolor tła */
     color: rgb(114, 30, 30) !important; /* Kolor tekstu na biały */
-}
+} 
 
 .shake {
     animation: shake 0.5s ease;

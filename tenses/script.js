@@ -2696,6 +2696,730 @@ const sentences = [
         rule: "Podmiot + will be + czasownik z -ing.",
         type: "Twierdzące - Future Continuous",
         description: "Future Continuous opisuje przyszłe relacje. Podmiot (I) + will be + czasownik (in touch) + dopełnienie (with you all week)."
+    },
+    {
+        polish: "Wczoraj zjadłem pizzę.",
+        tense: "Past Simple",
+        correctForm: "I ate pizza yesterday.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność z przeszłości."
+    },
+    {
+        polish: "Nie widziałem tego filmu.",
+        tense: "Past Simple",
+        correctForm: "I did not see that movie.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' (didn't) do przeczenia."
+    },
+    {
+        polish: "Czy on napisał książkę?",
+        tense: "Past Simple",
+        correctForm: "Did he write a book?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Ona uczyła się przez cały dzień.",
+        tense: "Past Continuous",
+        correctForm: "She was studying all day.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje czynność trwającą w przeszłości."
+    },
+    {
+        polish: "Nie pisałem maila wczoraj.",
+        tense: "Past Continuous",
+        correctForm: "I was not writing an email yesterday.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy oni biegli w parku, gdy zaczął padać deszcz?",
+        tense: "Past Continuous",
+        correctForm: "Were they running in the park when it started to rain?",
+        rule: "Were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+    {
+        polish: "W weekend odwiedziłem moich dziadków.",
+        tense: "Past Simple",
+        correctForm: "I visited my grandparents over the weekend.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność."
+    },
+    {
+        polish: "Nie czytałem tej książki.",
+        tense: "Past Simple",
+        correctForm: "I did not read that book.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' do przeczenia."
+    },
+    {
+        polish: "Czy ona widziała ten obraz?",
+        tense: "Past Simple",
+        correctForm: "Did she see that painting?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Myślałem o wakacjach, gdy dzwoniłeś.",
+        tense: "Past Continuous",
+        correctForm: "I was thinking about the holidays when you called.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje myślenie trwające w przeszłości."
+    },
+    {
+        polish: "Nie oglądaliśmy meczu.",
+        tense: "Past Continuous",
+        correctForm: "We were not watching the match.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy oni tańczyli, gdy zagrano muzykę?",
+        tense: "Past Continuous",
+        correctForm: "Were they dancing when the music played?",
+        rule: "Were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+    // Dodaj więcej zdań
+    {
+        polish: "Wczoraj słuchałem muzyki.",
+        tense: "Past Simple",
+        correctForm: "I listened to music yesterday.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność."
+    },
+    {
+        polish: "Nie kupiłem żadnych owoców.",
+        tense: "Past Simple",
+        correctForm: "I did not buy any fruits.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' do przeczenia."
+    },
+    {
+        polish: "Czy ona rozmawiała ze mną wczoraj?",
+        tense: "Past Simple",
+        correctForm: "Did she talk to me yesterday?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Siedziałem w parku przez dwie godziny.",
+        tense: "Past Continuous",
+        correctForm: "I was sitting in the park for two hours.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje czynność trwającą w przeszłości."
+    },
+    {
+        polish: "Nie spałem dobrze wczoraj w nocy.",
+        tense: "Past Continuous",
+        correctForm: "I was not sleeping well last night.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy oni rozwiązywali krzyżówkę wczoraj?",
+        tense: "Past Continuous",
+        correctForm: "Were they solving a crossword yesterday?",
+        rule: "Were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+    // Kontynuuj dodawanie kolejnych zdań
+    {
+        polish: "Znalazłem zgubiony klucz.",
+        tense: "Past Simple",
+        correctForm: "I found the lost key.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność."
+    },
+    {
+        polish: "Nie widziałem mojego przyjaciela od dawna.",
+        tense: "Past Simple",
+        correctForm: "I did not see my friend for a long time.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' do przeczenia."
+    },
+    {
+        polish: "Czy oni zapomnieli o spotkaniu?",
+        tense: "Past Simple",
+        correctForm: "Did they forget about the meeting?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Ona malowała obraz, gdy przyjechałem.",
+        tense: "Past Continuous",
+        correctForm: "She was painting a picture when I arrived.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje czynność trwającą w przeszłości."
+    },
+    {
+        polish: "Nie gotowałem obiadu wczoraj.",
+        tense: "Past Continuous",
+        correctForm: "I was not cooking dinner yesterday.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy ty ćwiczyłeś wczoraj wieczorem?",
+        tense: "Past Continuous",
+        correctForm: "Were you exercising last night?",
+        rule: "Were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+     // Past Simple
+     {
+        polish: "Wczoraj poszłem do sklepu.",
+        tense: "Past Simple",
+        correctForm: "I went to the store yesterday.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność."
+    },
+    {
+        polish: "Nie zjadłem śniadania rano.",
+        tense: "Past Simple",
+        correctForm: "I did not eat breakfast in the morning.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' do przeczenia."
+    },
+    {
+        polish: "Czy ona zadzwoniła do mnie wczoraj?",
+        tense: "Past Simple",
+        correctForm: "Did she call me yesterday?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Biegałem po parku, gdy zaczęło padać.",
+        tense: "Past Continuous",
+        correctForm: "I was running in the park when it started to rain.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje czynność trwającą w przeszłości."
+    },
+    {
+        polish: "Nie oglądałem telewizji wczoraj wieczorem.",
+        tense: "Past Continuous",
+        correctForm: "I was not watching TV last night.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy oni grali w piłkę nożną, gdy przyszliśmy?",
+        tense: "Past Continuous",
+        correctForm: "Were they playing football when we arrived?",
+        rule: "Were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+    {
+        polish: "Wczoraj napisałem list.",
+        tense: "Past Simple",
+        correctForm: "I wrote a letter yesterday.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność."
+    },
+    {
+        polish: "Nie znalazłem moich kluczy.",
+        tense: "Past Simple",
+        correctForm: "I did not find my keys.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' do przeczenia."
+    },
+    {
+        polish: "Czy ty sprzątałeś pokój wczoraj?",
+        tense: "Past Simple",
+        correctForm: "Did you clean your room yesterday?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Oni siedzieli na ławce, gdy padał deszcz.",
+        tense: "Past Continuous",
+        correctForm: "They were sitting on the bench when it was raining.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje czynność trwającą w przeszłości."
+    },
+    {
+        polish: "Nie czytałem książki wczoraj.",
+        tense: "Past Continuous",
+        correctForm: "I was not reading a book yesterday.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy ona czekała na mnie wczoraj?",
+        tense: "Past Continuous",
+        correctForm: "Was she waiting for me yesterday?",
+        rule: "Was/were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+    {
+        polish: "Zadzwoniłem do ciebie wczoraj.",
+        tense: "Past Simple",
+        correctForm: "I called you yesterday.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność."
+    },
+    {
+        polish: "Nie kupiłem niczego w sklepie.",
+        tense: "Past Simple",
+        correctForm: "I did not buy anything at the store.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' do przeczenia."
+    },
+    {
+        polish: "Czy on grał na gitarze wczoraj?",
+        tense: "Past Simple",
+        correctForm: "Did he play the guitar yesterday?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Ona malowała przez trzy godziny.",
+        tense: "Past Continuous",
+        correctForm: "She was painting for three hours.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje czynność trwającą w przeszłości."
+    },
+    {
+        polish: "Nie spacerowałem wczoraj wieczorem.",
+        tense: "Past Continuous",
+        correctForm: "I was not walking yesterday evening.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy oni rozmawiali o książkach?",
+        tense: "Past Continuous",
+        correctForm: "Were they talking about books?",
+        rule: "Were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+    // Kontynuuj dodawanie kolejnych zdań
+    {
+        polish: "Odwiedziłem moją babcię wczoraj.",
+        tense: "Past Simple",
+        correctForm: "I visited my grandmother yesterday.",
+        rule: "Podmiot + czasownik w formie przeszłej.",
+        type: "Twierdzące - Past Simple",
+        description: "Opisuje zakończoną czynność."
+    },
+    {
+        polish: "Nie widziałem jej od zeszłego tygodnia.",
+        tense: "Past Simple",
+        correctForm: "I did not see her since last week.",
+        rule: "Podmiot + did not + czasownik w formie podstawowej.",
+        type: "Przeczące - Past Simple",
+        description: "Używamy 'did not' do przeczenia."
+    },
+    {
+        polish: "Czy ty czytałeś tę książkę?",
+        tense: "Past Simple",
+        correctForm: "Did you read that book?",
+        rule: "Did + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Past Simple",
+        description: "Zadawanie pytań w czasie Past Simple."
+    },
+    {
+        polish: "Byłem w pracy, gdy zadzwoniłeś.",
+        tense: "Past Continuous",
+        correctForm: "I was at work when you called.",
+        rule: "Podmiot + was/were + czasownik z końcówką -ing.",
+        type: "Twierdzące - Past Continuous",
+        description: "Opisuje czynność trwającą w przeszłości."
+    },
+    {
+        polish: "Nie pisałem eseju wczoraj.",
+        tense: "Past Continuous",
+        correctForm: "I was not writing an essay yesterday.",
+        rule: "Podmiot + was/were not + czasownik z końcówką -ing.",
+        type: "Przeczące - Past Continuous",
+        description: "Przeczenie w czasie Past Continuous."
+    },
+    {
+        polish: "Czy oni oglądali film wczoraj?",
+        tense: "Past Continuous",
+        correctForm: "Were they watching a movie yesterday?",
+        rule: "Were + podmiot + czasownik z końcówką -ing?",
+        type: "Pytające - Past Continuous",
+        description: "Zadawanie pytań o czynności trwające w przeszłości."
+    },
+    {
+        polish: "Jutro pójdę na zakupy.",
+        tense: "Future Simple",
+        correctForm: "I will go shopping tomorrow.",
+        rule: "Podmiot + will + czasownik w formie podstawowej.",
+        type: "Twierdzące - Future Simple",
+        description: "Opisuje czynność, która wydarzy się w przyszłości."
+    },
+    {
+        polish: "Nie będę jadł słodyczy w przyszłym miesiącu.",
+        tense: "Future Simple",
+        correctForm: "I will not eat sweets next month.",
+        rule: "Podmiot + will not + czasownik w formie podstawowej.",
+        type: "Przeczące - Future Simple",
+        description: "Używamy 'will not' do przeczenia."
+    },
+    {
+        polish: "Czy on przyjdzie na imprezę?",
+        tense: "Future Simple",
+        correctForm: "Will he come to the party?",
+        rule: "Will + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Future Simple",
+        description: "Zadawanie pytań o przyszłe zdarzenia."
+    },
+    {
+        polish: "W przyszłym tygodniu będę pracować nad projektem.",
+        tense: "Future Continuous",
+        correctForm: "I will be working on the project next week.",
+        rule: "Podmiot + will be + czasownik z końcówką -ing.",
+        type: "Twierdzące - Future Continuous",
+        description: "Opisuje czynność, która będzie trwać w przyszłości."
+    },
+    {
+        polish: "Nie będę się uczyć jutro wieczorem.",
+        tense: "Future Continuous",
+        correctForm: "I will not be studying tomorrow evening.",
+        rule: "Podmiot + will not be + czasownik z końcówką -ing.",
+        type: "Przeczące - Future Continuous",
+        description: "Przeczenie w czasie Future Continuous."
+    },
+    {
+        polish: "Czy oni będą grać w piłkę nożną w sobotę?",
+        tense: "Future Continuous",
+        correctForm: "Will they be playing football on Saturday?",
+        rule: "Will + podmiot + be + czasownik z końcówką -ing?",
+        type: "Pytające - Future Continuous",
+        description: "Zadawanie pytań o przyszłe czynności trwające."
+    },
+    {
+        polish: "Za miesiąc zamieszkam w nowym mieście.",
+        tense: "Future Simple",
+        correctForm: "I will move to a new city next month.",
+        rule: "Podmiot + will + czasownik w formie podstawowej.",
+        type: "Twierdzące - Future Simple",
+        description: "Opisuje czynność, która wydarzy się w przyszłości."
+    },
+    {
+        polish: "Nie zamierzam kupić nowego samochodu.",
+        tense: "Future Simple",
+        correctForm: "I will not buy a new car.",
+        rule: "Podmiot + will not + czasownik w formie podstawowej.",
+        type: "Przeczące - Future Simple",
+        description: "Używamy 'will not' do przeczenia."
+    },
+    {
+        polish: "Czy ty pojedziesz na wakacje w przyszłym roku?",
+        tense: "Future Simple",
+        correctForm: "Will you go on vacation next year?",
+        rule: "Will + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Future Simple",
+        description: "Zadawanie pytań o przyszłe zdarzenia."
+    },
+    {
+        polish: "W przyszłym miesiącu będę się uczyć języka angielskiego.",
+        tense: "Future Continuous",
+        correctForm: "I will be learning English next month.",
+        rule: "Podmiot + will be + czasownik z końcówką -ing.",
+        type: "Twierdzące - Future Continuous",
+        description: "Opisuje czynność, która będzie trwać w przyszłości."
+    },
+    {
+        polish: "Nie będę pracować w ten weekend.",
+        tense: "Future Continuous",
+        correctForm: "I will not be working this weekend.",
+        rule: "Podmiot + will not be + czasownik z końcówką -ing.",
+        type: "Przeczące - Future Continuous",
+        description: "Przeczenie w czasie Future Continuous."
+    },
+    {
+        polish: "Czy ona będzie rozmawiać z klientem w przyszłym tygodniu?",
+        tense: "Future Continuous",
+        correctForm: "Will she be talking to the client next week?",
+        rule: "Will + podmiot + be + czasownik z końcówką -ing?",
+        type: "Pytające - Future Continuous",
+        description: "Zadawanie pytań o przyszłe czynności trwające."
+    },
+    {
+        polish: "Zaraz wyjadę na wakacje.",
+        tense: "Future Simple",
+        correctForm: "I will leave for vacation soon.",
+        rule: "Podmiot + will + czasownik w formie podstawowej.",
+        type: "Twierdzące - Future Simple",
+        description: "Opisuje czynność, która wydarzy się w przyszłości."
+    },
+    {
+        polish: "Nie zamierzam zjeść tej pizzy.",
+        tense: "Future Simple",
+        correctForm: "I will not eat this pizza.",
+        rule: "Podmiot + will not + czasownik w formie podstawowej.",
+        type: "Przeczące - Future Simple",
+        description: "Używamy 'will not' do przeczenia."
+    },
+    {
+        polish: "Czy on pomoże mi w tym projekcie?",
+        tense: "Future Simple",
+        correctForm: "Will he help me with this project?",
+        rule: "Will + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Future Simple",
+        description: "Zadawanie pytań o przyszłe zdarzenia."
+    },
+    {
+        polish: "Będę czytać książkę w przyszły weekend.",
+        tense: "Future Continuous",
+        correctForm: "I will be reading a book next weekend.",
+        rule: "Podmiot + will be + czasownik z końcówką -ing.",
+        type: "Twierdzące - Future Continuous",
+        description: "Opisuje czynność, która będzie trwać w przyszłości."
+    },
+    {
+        polish: "Nie będę grał w gry w przyszłym tygodniu.",
+        tense: "Future Continuous",
+        correctForm: "I will not be playing games next week.",
+        rule: "Podmiot + will not be + czasownik z końcówką -ing.",
+        type: "Przeczące - Future Continuous",
+        description: "Przeczenie w czasie Future Continuous."
+    },
+    {
+        polish: "Czy oni będą oglądać film jutro?",
+        tense: "Future Continuous",
+        correctForm: "Will they be watching a movie tomorrow?",
+        rule: "Will + podmiot + be + czasownik z końcówką -ing?",
+        type: "Pytające - Future Continuous",
+        description: "Zadawanie pytań o przyszłe czynności trwające."
+    },
+    {
+        polish: "W przyszłości będę podróżować dużo.",
+        tense: "Future Simple",
+        correctForm: "I will travel a lot in the future.",
+        rule: "Podmiot + will + czasownik w formie podstawowej.",
+        type: "Twierdzące - Future Simple",
+        description: "Opisuje czynność, która wydarzy się w przyszłości."
+    },
+    {
+        polish: "Nie zamierzam przychodzić na tę imprezę.",
+        tense: "Future Simple",
+        correctForm: "I will not come to this party.",
+        rule: "Podmiot + will not + czasownik w formie podstawowej.",
+        type: "Przeczące - Future Simple",
+        description: "Używamy 'will not' do przeczenia."
+    },
+    {
+        polish: "Czy ty kupisz nową sukienkę?",
+        tense: "Future Simple",
+        correctForm: "Will you buy a new dress?",
+        rule: "Will + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Future Simple",
+        description: "Zadawanie pytań o przyszłe zdarzenia."
+    },
+    {
+        polish: "W przyszłym roku będę pracować nad nowym projektem.",
+        tense: "Future Continuous",
+        correctForm: "I will be working on a new project next year.",
+        rule: "Podmiot + will be + czasownik z końcówką -ing.",
+        type: "Twierdzące - Future Continuous",
+        description: "Opisuje czynność, która będzie trwać w przyszłości."
+    },
+    {
+        polish: "Nie będę chodzić na siłownię w ten weekend.",
+        tense: "Future Continuous",
+        correctForm: "I will not be going to the gym this weekend.",
+        rule: "Podmiot + will not be + czasownik z końcówką -ing.",
+        type: "Przeczące - Future Continuous",
+        description: "Przeczenie w czasie Future Continuous."
+    },
+    {
+        polish: "Czy ona będzie pracować zdalnie w przyszłym miesiącu?",
+        tense: "Future Continuous",
+        correctForm: "Will she be working remotely next month?",
+        rule: "Will + podmiot + be + czasownik z końcówką -ing?",
+        type: "Pytające - Future Continuous",
+        description: "Zadawanie pytań o przyszłe czynności trwające."
+    },
+    {
+        polish: "Będę uczyć się na egzamin w przyszłym miesiącu.",
+        tense: "Future Simple",
+        correctForm: "I will study for the exam next month.",
+        rule: "Podmiot + will + czasownik w formie podstawowej.",
+        type: "Twierdzące - Future Simple",
+        description: "Opisuje czynność, która wydarzy się w przyszłości."
+    },
+    {
+        polish: "Nie zamierzam iść na zakupy jutro.",
+        tense: "Future Simple",
+        correctForm: "I will not go shopping tomorrow.",
+        rule: "Podmiot + will not + czasownik w formie podstawowej.",
+        type: "Przeczące - Future Simple",
+        description: "Używamy 'will not' do przeczenia."
+    },
+    {
+        polish: "Czy oni odwiedzą nas w weekend?",
+        tense: "Future Simple",
+        correctForm: "Will they visit us this weekend?",
+        rule: "Will + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Future Simple",
+        description: "Zadawanie pytań o przyszłe zdarzenia."
+    },
+    {
+        polish: "Będę rozmawiać z szefem o projekcie.",
+        tense: "Future Continuous",
+        correctForm: "I will be talking to my boss about the project.",
+        rule: "Podmiot + will be + czasownik z końcówką -ing.",
+        type: "Twierdzące - Future Continuous",
+        description: "Opisuje czynność, która będzie trwać w przyszłości."
+    },
+    {
+        polish: "Nie będę się martwić o to jutro.",
+        tense: "Future Continuous",
+        correctForm: "I will not be worrying about it tomorrow.",
+        rule: "Podmiot + will not be + czasownik z końcówką -ing.",
+        type: "Przeczące - Future Continuous",
+        description: "Przeczenie w czasie Future Continuous."
+    },
+    {
+        polish: "Czy wy będziecie trenować na siłowni jutro?",
+        tense: "Future Continuous",
+        correctForm: "Will you be working out at the gym tomorrow?",
+        rule: "Will + podmiot + be + czasownik z końcówką -ing?",
+        type: "Pytające - Future Continuous",
+        description: "Zadawanie pytań o przyszłe czynności trwające."
+    },
+    {
+        polish: "Pojutrze będę pisać raport.",
+        tense: "Future Simple",
+        correctForm: "I will write the report the day after tomorrow.",
+        rule: "Podmiot + will + czasownik w formie podstawowej.",
+        type: "Twierdzące - Future Simple",
+        description: "Opisuje czynność, która wydarzy się w przyszłości."
+    },
+    {
+        polish: "Nie będę grać w piłkę nożną w przyszłym tygodniu.",
+        tense: "Future Simple",
+        correctForm: "I will not play football next week.",
+        rule: "Podmiot + will not + czasownik w formie podstawowej.",
+        type: "Przeczące - Future Simple",
+        description: "Używamy 'will not' do przeczenia."
+    },
+    {
+        polish: "Czy ona kupi nowego laptopa?",
+        tense: "Future Simple",
+        correctForm: "Will she buy a new laptop?",
+        rule: "Will + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Future Simple",
+        description: "Zadawanie pytań o przyszłe zdarzenia."
+    },
+    {
+        polish: "W przyszłym miesiącu będę pracować nad nowym projektem.",
+        tense: "Future Continuous",
+        correctForm: "I will be working on a new project next month.",
+        rule: "Podmiot + will be + czasownik z końcówką -ing.",
+        type: "Twierdzące - Future Continuous",
+        description: "Opisuje czynność, która będzie trwać w przyszłości."
+    },
+    {
+        polish: "Nie będę gotować w ten weekend.",
+        tense: "Future Continuous",
+        correctForm: "I will not be cooking this weekend.",
+        rule: "Podmiot + will not be + czasownik z końcówką -ing.",
+        type: "Przeczące - Future Continuous",
+        description: "Przeczenie w czasie Future Continuous."
+    },
+    {
+        polish: "Czy oni będą oglądać nowy film?",
+        tense: "Future Continuous",
+        correctForm: "Will they be watching the new movie?",
+        rule: "Will + podmiot + be + czasownik z końcówką -ing?",
+        type: "Pytające - Future Continuous",
+        description: "Zadawanie pytań o przyszłe czynności trwające."
+    },
+    {
+        polish: "W przyszłym roku będę jeździć na wakacje co miesiąc.",
+        tense: "Future Simple",
+        correctForm: "I will go on vacation every month next year.",
+        rule: "Podmiot + will + czasownik w formie podstawowej.",
+        type: "Twierdzące - Future Simple",
+        description: "Opisuje czynność, która wydarzy się w przyszłości."
+    },
+    {
+        polish: "Nie zamierzam dzwonić do niej jutro.",
+        tense: "Future Simple",
+        correctForm: "I will not call her tomorrow.",
+        rule: "Podmiot + will not + czasownik w formie podstawowej.",
+        type: "Przeczące - Future Simple",
+        description: "Używamy 'will not' do przeczenia."
+    },
+    {
+        polish: "Czy ty przyjdziesz na moje urodziny?",
+        tense: "Future Simple",
+        correctForm: "Will you come to my birthday?",
+        rule: "Will + podmiot + czasownik w formie podstawowej?",
+        type: "Pytające - Future Simple",
+        description: "Zadawanie pytań o przyszłe zdarzenia."
+    },
+    {
+        polish: "Zaraz będę jeść kolację.",
+        tense: "Future Continuous",
+        correctForm: "I will be having dinner soon.",
+        rule: "Podmiot + will be + czasownik z końcówką -ing.",
+        type: "Twierdzące - Future Continuous",
+        description: "Opisuje czynność, która będzie trwać w przyszłości."
+    },
+    {
+        polish: "Nie będę uczestniczyć w spotkaniu jutro.",
+        tense: "Future Continuous",
+        correctForm: "I will not be attending the meeting tomorrow.",
+        rule: "Podmiot + will not be + czasownik z końcówką -ing.",
+        type: "Przeczące - Future Continuous",
+        description: "Przeczenie w czasie Future Continuous."
+    },
+    {
+        polish: "Czy ona będzie uczyć się na egzamin?",
+        tense: "Future Continuous",
+        correctForm: "Will she be studying for the exam?",
+        rule: "Will + podmiot + be + czasownik z końcówką -ing?",
+        type: "Pytające - Future Continuous",
+        description: "Zadawanie pytań o przyszłe czynności trwające."
     }
 
     // Kontynuuj dodawanie innych zdań w podobny sposób...
