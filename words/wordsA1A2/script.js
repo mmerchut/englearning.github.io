@@ -1144,14 +1144,16 @@ const words = [
         { english: "create", polish: "tworzyć" }
 ];
 
-let selectedWords = words.slice(); // Start with all words
+let selectedWords = [];
 let currentIndex = 0;
 let currentWord;
 let isEnglishToPolish = true;
 let score = 0;
 let translationVisible = false;
-let answerGiven = false; // Nowa zmienna do śledzenia, czy odpowiedź została podana
+let answerGiven = false; // Śledzenie, czy odpowiedź została podana
+let selectedCount = 0; // Zmienna do przechowywania liczby wybranych słów
 
+const container = document.getElementById("containerAnswer")
 const wordDisplay = document.getElementById('wordDisplay');
 const userInput = document.getElementById('userInput');
 const submitBtn = document.getElementById('submitBtn');
@@ -1163,23 +1165,33 @@ const translationDisplay = document.getElementById('translationDisplay');
 const toggleTranslationBtn = document.getElementById('toggleTranslationBtn');
 const switchLanguageBtn = document.getElementById('switchLanguageBtn');
 
+function init() {
+    // Losowo wybierz 5 słów na początku
+    selectedWords = getRandomWords(words, 5);
+    currentIndex = 0;
+    displayWord();
+}
+
 document.querySelectorAll('.word-select-btn').forEach(button => {
     button.addEventListener('click', () => {
         const count = button.getAttribute('data-count');
         if (count === 'all') {
             selectedWords = words.slice();
-            selectedCount = words.length; // Zaktualizuj wybraną ilość
         } else {
             const num = Math.min(parseInt(count), words.length);
-            selectedWords = words.slice(0, num);
+            selectedWords = getRandomWords(words, num); // Losowo wybierz słowa
             selectedCount = num; // Zaktualizuj wybraną ilość
         }
-        shuffle(selectedWords);
         currentIndex = 0;
         result.textContent = `Wybrano ${selectedCount} słówek do nauki.`; // Wyświetl informację
         setTimeout(displayWord, 2000);
     });
 });
+
+function getRandomWords(sourceArray, count) {
+    const shuffled = sourceArray.slice().sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+}
 
 function displayWord() {
     if (currentIndex < selectedWords.length) {
@@ -1196,14 +1208,13 @@ function displayWord() {
         result.textContent = '';
         updateTranslationDisplay();
     } else {
-        // Loop back to the start of the selected words
-        currentIndex = 0;
-        displayWord();
+        result.textContent = "Koniec słówek!";
+        optionsContainer.innerHTML = ''; // Wyczyść opcje po zakończeniu
     }
 }
 
 function generateOptions(correctAnswer) {
-    optionsContainer.innerHTML = ''; // Clear previous options
+    optionsContainer.innerHTML = ''; // Wyczyść poprzednie opcje
 
     const options = [correctAnswer];
     while (options.length < 4) {
@@ -1216,7 +1227,7 @@ function generateOptions(correctAnswer) {
         }
     }
 
-    shuffle(options); // Shuffle options
+    shuffle(options); // Tasuj opcje
 
     options.forEach(option => {
         const btn = document.createElement('button');
@@ -1235,8 +1246,44 @@ function checkAnswer(selected, correct) {
 
     if (isCorrect) {
         result.textContent = "Dobrze!";
+        score++; // Zwiększ wynik
+
+        // Dodaj animację bounce do kontenera
+        container.classList.add('bounce');
+
+        // Dodaj klasę .btn-yellow do wszystkich przycisków
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.classList.add('btn-yellow');
+        });
+
+        // Usuń klasy po pewnym czasie
+        setTimeout(() => {
+            container.classList.remove('bounce');
+            buttons.forEach(button => {
+                button.classList.remove('btn-yellow');
+            });
+        }, 600);
+
     } else {
         result.textContent = `Źle! Poprawne tłumaczenie to: ${correct}`;
+
+        // Dodaj animację shake do kontenera
+        container.classList.add('shake');
+
+        // Dodaj klasę .btn-red do wszystkich przycisków
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.classList.add('btn-red');
+        });
+
+        // Usuń klasy po pewnym czasie
+        setTimeout(() => {
+            container.classList.remove('shake');
+            buttons.forEach(button => {
+                button.classList.remove('btn-red');
+            });
+        }, 600);
     }
 
     answerGiven = true; // Oznacz, że odpowiedź została podana
@@ -1270,11 +1317,12 @@ function updateTranslationDisplay() {
 }
 
 switchLanguageBtn.addEventListener('click', () => {
-    isEnglishToPolish = !isEnglishToPolish; // Toggle the language direction
-    displayWord(); // Refresh the displayed word
+    isEnglishToPolish = !isEnglishToPolish; // Zmień kierunek języka
+    displayWord(); // Odśwież wyświetlane słowo
 });
 
-displayWord(); // Initial word display
+// Inicjalizacja
+init();
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
