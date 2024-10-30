@@ -282,6 +282,7 @@ let currentIndex = 0;
 let isEnglishToPolish = true;
 let score = 0;
 let answerGiven = false; // Track if an answer has been given
+let isSpeakingEnabled = false; // Track if speaking is enabled
 
 // DOM Elements
 const container = document.getElementById("containerAnswer");
@@ -294,6 +295,7 @@ const optionsContainer = document.getElementById('optionsContainer');
 const translationDisplay = document.getElementById('translationDisplay');
 const toggleTranslationBtn = document.getElementById('toggleTranslationBtn');
 const switchLanguageBtn = document.getElementById('switchLanguageBtn');
+const toggleSpeakBtn = document.getElementById('toggleSpeakBtn'); // New button for toggling speaking
 
 // Initialization
 function init() {
@@ -315,7 +317,11 @@ function displayWord() {
     generateOptions(isEnglishToPolish ? selectedWords[currentIndex].polish : selectedWords[currentIndex].english);
     userInput.value = '';
     result.textContent = '';
-    speakWord(); // Automatically speak the displayed word
+
+    // Speak the word only if speaking is enabled
+    if (isSpeakingEnabled) {
+        speakWord(); // Automatically speak the displayed word
+    }
 
     // Update the translation display
     const correctTranslation = isEnglishToPolish ? selectedWords[currentIndex].polish : selectedWords[currentIndex].english;
@@ -377,6 +383,7 @@ function generateOptions(correctAnswer) {
     });
 }
 
+// Check the answer
 function checkAnswer(selected, correct) {
     if (answerGiven) return; // If an answer has already been given, do nothing
 
@@ -393,6 +400,7 @@ function checkAnswer(selected, correct) {
         switchLanguageBtn.classList.add("BtnGreen");
         nextBtn.classList.add("nextBtnGreen");
         submitBtn.classList.add("submitBtnGreen");
+        toggleSpeakBtn.classList.add("BtnGreen");
 
         // Wait 2 seconds, then show the next word
         setTimeout(() => {
@@ -408,6 +416,7 @@ function checkAnswer(selected, correct) {
             switchLanguageBtn.classList.remove("BtnGreen");
             nextBtn.classList.remove("nextBtnGreen");
             submitBtn.classList.remove("submitBtnGreen");
+            toggleSpeakBtn.classList.remove("BtnGreen");
         }, 600);
     } else {
         result.textContent = `Źle! Poprawne tłumaczenie to: ${correct}`;
@@ -419,6 +428,7 @@ function checkAnswer(selected, correct) {
         switchLanguageBtn.classList.add("btn-red");
         nextBtn.classList.add("nextBtnRed");
         submitBtn.classList.add("submitBtnRed");
+        toggleSpeakBtn.classList.add("btn-red");
 
         setTimeout(() => {
             container.classList.remove('shake');
@@ -427,6 +437,7 @@ function checkAnswer(selected, correct) {
             switchLanguageBtn.classList.remove("btn-red");
             nextBtn.classList.remove("nextBtnRed");
             submitBtn.classList.remove("submitBtnRed");
+            toggleSpeakBtn.classList.remove("btn-red");
         }, 600);
     }
 
@@ -460,6 +471,12 @@ toggleTranslationBtn.addEventListener('click', () => {
 switchLanguageBtn.addEventListener('click', () => {
     isEnglishToPolish = !isEnglishToPolish; // Change language direction
     displayWord(); // Refresh displayed word
+});
+
+// Toggle speaking
+toggleSpeakBtn.addEventListener('click', () => {
+    isSpeakingEnabled = !isSpeakingEnabled; // Toggle speaking on/off
+    toggleSpeakBtn.textContent = isSpeakingEnabled ? 'Wyłącz odczytywanie' : 'Włącz odczytywanie'; // Update button text
 });
 
 // Initialization

@@ -314,7 +314,7 @@ label:hover {
 }
 
 #switchLanguageBtn {
-  color: #e0ab48;
+  color: #05715a;
   font-size: 25px;
   border: none;
   background-color: #02c39a;
@@ -480,6 +480,20 @@ button {
   background-color: rgb(39, 192, 62) !important;
   color: #1b8733 !important;
   transition: 0s !important;
+}
+
+#toggleSpeakBtn {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #05715a;
+  margin-left: 5px;
+}
+
+#toggleSpeakBtn:hover {
+  
+  transform: scale(1.10);
+  cursor: pointer;
 }
 
 

@@ -482,6 +482,11 @@ button {
   transition: 0s !important;
 }
 
+#toggleSpeakBtn {
+  border: none;
+  background: transparent;
+}
+
 
 
 
