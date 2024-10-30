@@ -122,8 +122,8 @@ h1 {
   color: #05715a;
   border: none;
   background-color: #02c39a;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  /* -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; */
 }
 
 .word-select-btn {
@@ -222,7 +222,7 @@ span {
   margin-top: -1px;
   left: 0;
   display: block;
-  background: rgb(74, 71, 71);
+  background: rgb(161, 172, 46);
   transition: 0.5s;
 }
 span:first-child {
@@ -305,8 +305,7 @@ label:hover {
   border: none;
   background-color: #02c39a;
   font-weight: bold;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+
 }
 
 #toggleTranslationBtn:hover {
@@ -320,8 +319,8 @@ label:hover {
   border: none;
   background-color: #02c39a;
   font-weight: bold;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  /* -webkit-transition-duration: 0.2s; 
+  transition-duration: 0.2s; */
 }
 
 #switchLanguageBtn:hover {
@@ -344,7 +343,7 @@ label:hover {
   transition-property: color;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  border-radius: 5px; /* Dodanie zaokrąglenia rogów */
+  border-radius: 5px; 
 }
 
 #nextBtn:before {
@@ -404,6 +403,84 @@ label:hover {
         transition: 0.2s;
       }
   }
+
+  .btn-red {
+    background-color: rgb(235, 43, 43) !important; /* Zmieniony kolor tła */
+    color: rgb(114, 30, 30) !important; /* Kolor tekstu na biały */
+} 
+
+.shake {
+    animation: shake 0.5s ease;
+    background-color: rgb(235, 43, 43); /* Zmieniony kolor tła */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.btn-yellow {
+  background-color: rgb(39, 192, 62) !important; /* Kolor tła na żółty */
+  color: #1b8733 !important;  /* Kolor tekstu na czarny */
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
+.bounce {
+  animation: bounce 0.5s ease;
+  background-color: rgb(39, 192, 62);
+}
+
+button {
+  background-color: #fff;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+    75% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.nextBtnRed {
+  background-color: #981616 !important;
+  color: #fff !important;
+  transition: 0s !important;
+}
+
+#submitBtn {
+  background-color: #fcfdfc;
+}
+
+.submitBtnRed {
+  background-color: #981616 !important;
+  color: #fff !important;
+  transition: 0s !important;
+}
+
+.nextBtnGreen {
+  background-color: rgb(27, 144, 44) !important;
+  color: #0e491b !important;
+  transition: 0s !important;
+}
+
+.submitBtnGreen {
+  background-color: rgb(27, 144, 44) !important;
+  color: #0e491b !important;
+  transition: 0s !important;
+}
+
+.BtnGreen {
+  background-color: rgb(39, 192, 62) !important;
+  color: #1b8733 !important;
+  transition: 0s !important;
+}
 
 
 
