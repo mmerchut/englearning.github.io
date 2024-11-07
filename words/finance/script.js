@@ -476,7 +476,7 @@ switchLanguageBtn.addEventListener('click', () => {
 // Toggle speaking
 toggleSpeakBtn.addEventListener('click', () => {
     isSpeakingEnabled = !isSpeakingEnabled; // Toggle speaking on/off
-    toggleSpeakBtn.textContent = isSpeakingEnabled ? 'Wyłącz odczytywanie' : 'Włącz odczytywanie'; // Update button text
+    toggleSpeakBtn.innerHTML = isSpeakingEnabled ? '<i class="fa-solid fa-volume-low"></i>' : '<i class="fa-solid fa-volume-low"></i>'; // Update button text
 });
 
 // Initialization
