@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauka Słówek</title>
+    <link rel="stylesheet" href="../../styleswords.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <header>
+        <input id="burger" type="checkbox" />
+        <label for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul>
+            <li><a href="../../index.html">Strona główna</a></li>
+            <li><a href="../../tenses/index.html">Czasy angielskie</a></li>
+            <li><a href="../../WordsMenu/index.html">Słownictwo</a></li>
+            
+          </ul>
+        </nav>
+      </header>
+
+    <div class="container" >
+        <div class="quiz-box" id="containerAnswer">
+            <button id="toggleTranslationBtn"><i class="fa-solid fa-language"></i></button>  <button id="switchLanguageBtn"><i class="fa-solid fa-retweet"></i></button>
+            <div id="wordDisplay" class="word-display"></div>
+            <div id="translationDisplay"></div>
+            <div id="optionsContainer" class="options-container"></div>
+            <input type="text" id="userInput" class="user-input" placeholder="Wpisz tłumaczenie...">
+            <button id="submitBtn" class="btn">Sprawdź</button>
+            <button id="nextBtn" class="btn">Następne słówko</button>
+            <div id="result" class="result"></div>
+            <button id="hideButton"><i class="fa-solid fa-gear"></i></button>
+            <button id="hideTileButton"><i class="fa-solid fa-eye-slash"></i></button>
+            <div id="wordSelectContainer">
+                <div><H3 class="word-select">Wybierz 25 słówek do nauki z zakresu:</H3></div>
+<button class="word-select-btn" data-count="1">0-25</button>
+<button class="word-select-btn" data-count="2">25-50</button>
+<button class="word-select-btn" data-count="3">50-75</button>
+<button class="word-select-btn" data-count="4">75-100</button>
+<button class="word-select-btn" data-count="5">100-125</button>
+<button class="word-select-btn" data-count="6">125-150</button>
+<button class="word-select-btn" data-count="7">150-175</button>
+<button class="word-select-btn" data-count="8">175-200</button>
+<br>
+<button class="word-select-btn" data-count="9">200-225</button>
+<button class="word-select-btn" data-count="10">225-250</button>
+<button class="word-select-btn" data-count="11">250-275</button>
+<button class="word-select-btn" data-count="12">275-300</button>
+<button class="word-select-btn" data-count="13">300-325</button>
+<button class="word-select-btn" data-count="14">325-350</button>
+<button class="word-select-btn" data-count="15">350-375</button>
+<button class="word-select-btn" data-count="16">375-400</button>
+<br>
+<button class="word-select-btn" data-count="17">400-425</button>
+<button class="word-select-btn" data-count="18">425-450</button>
+<button class="word-select-btn" data-count="19">450-475</button>
+<button class="word-select-btn" data-count="20">475-500</button>
+<button class="word-select-btn" data-count="21">500-525</button>
+<button class="word-select-btn" data-count="22">525-550</button>
+<button class="word-select-btn" data-count="23">550-575</button>
+<button class="word-select-btn" data-count="24">575-600</button>
+<br>
+<button class="word-select-btn" data-count="25">600-625</button>
+<button class="word-select-btn" data-count="26">625-650</button>
+<button class="word-select-btn" data-count="27">650-675</button>
+<button class="word-select-btn" data-count="28">675-700</button>
+<button class="word-select-btn" data-count="29">700-725</button>
+<button class="word-select-btn" data-count="30">725-750</button>
+<button class="word-select-btn" data-count="31">750-775</button>
+<button class="word-select-btn" data-count="32">775-800</button>
+<br>
+<button class="word-select-btn" data-count="33">800-825</button>
+<button class="word-select-btn" data-count="34">825-850</button>
+<button class="word-select-btn" data-count="35">850-875</button>
+<button class="word-select-btn" data-count="36">875-900</button>
+<button class="word-select-btn" data-count="37">900-925</button>
+<button class="word-select-btn" data-count="38">925-950</button>
+<button class="word-select-btn" data-count="39">950-975</button>
+<button class="word-select-btn" data-count="40">975-1000</button>
+<br>
+<button class="word-select-btn" data-count="41">1000-1025</button>
+<button class="word-select-btn" data-count="42">1025-1050</button>
+<button class="word-select-btn" data-count="43">1050-1075</button>
+<button class="word-select-btn" data-count="44">1075-1100</button>
+<button class="word-select-btn" data-count="45">1100-1125</button>
+<button class="word-select-btn" data-count="46">1125-1150</button>
+<button class="word-select-btn" data-count="47">1150-1175</button>
+<button class="word-select-btn" data-count="48">1175-1200</button>
+<br>
+<button class="word-select-btn" data-count="49">1200-1225</button>
+<button class="word-select-btn" data-count="50">1225-1250</button>
+<button class="word-select-btn" data-count="51">1250-1275</button>
+<button class="word-select-btn" data-count="52">1275-1300</button>
+<button class="word-select-btn" data-count="53">1300-1325</button>
+<button class="word-select-btn" data-count="54">1325-1350</button>
+<button class="word-select-btn" data-count="55">1350-1375</button>
+<button class="word-select-btn" data-count="56">1375-1400</button>
+<br>
+<button class="word-select-btn" data-count="57">1400-1425</button>
+<button class="word-select-btn" data-count="58">1425-1450</button>
+<button class="word-select-btn" data-count="59">1450-1475</button>
+<button class="word-select-btn" data-count="60">1475-1500</button>
+<button class="word-select-btn" data-count="61">1500-1525</button>
+<button class="word-select-btn" data-count="62">1525-1550</button>
+<button class="word-select-btn" data-count="63">1550-1575</button>
+<button class="word-select-btn" data-count="64">1575-1600</button>
+<br>
+<button class="word-select-btn" data-count="65">1600-1625</button>
+<button class="word-select-btn" data-count="66">1625-1650</button>
+<button class="word-select-btn" data-count="67">1650-1675</button>
+<button class="word-select-btn" data-count="68">1675-1700</button>
+<button class="word-select-btn" data-count="69">1700-1725</button>
+<button class="word-select-btn" data-count="70">1725-1750</button>
+<button class="word-select-btn" data-count="71">1750-1775</button>
+<button class="word-select-btn" data-count="72">1775-1800</button>
+<br>
+<button class="word-select-btn" data-count="73">1800-1825</button>
+<button class="word-select-btn" data-count="74">1825-1850</button>
+<button class="word-select-btn" data-count="75">1850-1875</button>
+<button class="word-select-btn" data-count="76">1875-1900</button>
+<button class="word-select-btn" data-count="77">1900-1925</button>
+<button class="word-select-btn" data-count="78">1925-1950</button>
+<button class="word-select-btn" data-count="79">1950-1975</button>
+<button class="word-select-btn" data-count="80">1975-2000</button>
+<br>
+<button class="word-select-btn" data-count="81">2000-2025</button>
+<button class="word-select-btn" data-count="82">2025-2050</button>
+<button class="word-select-btn" data-count="83">2050-2075</button>
+<button class="word-select-btn" data-count="84">2075-2100</button>
+<button class="word-select-btn" data-count="85">2100-2125</button>
+<button class="word-select-btn" data-count="86">2125-2150</button>
+<button class="word-select-btn" data-count="87">2150-2175</button>
+<button class="word-select-btn" data-count="88">2175-2200</button>
+<br>
+<button class="word-select-btn" data-count="89">2200-2225</button>
+<button class="word-select-btn" data-count="90">2225-2250</button>
+<button class="word-select-btn" data-count="91">2250-2275</button>
+<button class="word-select-btn" data-count="92">2275-2300</button>
+<button class="word-select-btn" data-count="93">2300-2325</button>
+<button class="word-select-btn" data-count="94">2325-2350</button>
+<button class="word-select-btn" data-count="95">2350-2375</button>
+<button class="word-select-btn" data-count="96">2375-2400</button>
+<br>
+<button class="word-select-btn" data-count="97">2400-2425</button>
+<button class="word-select-btn" data-count="98">2425-2450</button>
+<button class="word-select-btn" data-count="99">2450-2475</button>
+<button class="word-select-btn" data-count="100">2475-2500</button>
+<button class="word-select-btn" data-count="101">2500-2525</button>
+<button class="word-select-btn" data-count="102">2525-2550</button>
+<button class="word-select-btn" data-count="103">2550-2575</button>
+<button class="word-select-btn" data-count="104">2575-2600</button>
+<br>
+<button class="word-select-btn" data-count="105">2600-2625</button>
+<button class="word-select-btn" data-count="106">2625-2650</button>
+<button class="word-select-btn" data-count="107">2650-2675</button>
+<button class="word-select-btn" data-count="108">2675-2700</button>
+<button class="word-select-btn" data-count="109">2700-2725</button>
+<button class="word-select-btn" data-count="110">2725-2750</button>
+<button class="word-select-btn" data-count="111">2750-2775</button>
+<button class="word-select-btn" data-count="112">2775-2800</button>
+<br>
+<button class="word-select-btn" data-count="113">2800-2825</button>
+<button class="word-select-btn" data-count="114">2825-2850</button>
+<button class="word-select-btn" data-count="115">2850-2875</button>
+<button class="word-select-btn" data-count="116">2875-2900</button>
+<button class="word-select-btn" data-count="117">2900-2925</button>
+<button class="word-select-btn" data-count="118">2925-2950</button>
+<button class="word-select-btn" data-count="119">2950-2975</button>
+<button class="word-select-btn" data-count="120">2975-3000</button>
+<br>
+<button class="word-select-btn" data-count="121">3000-3025</button>
+<button class="word-select-btn" data-count="122">3025-3050</button>
+<button class="word-select-btn" data-count="123">3050-3075</button>
+<button class="word-select-btn" data-count="124">3075-3100</button>
+<button class="word-select-btn" data-count="125">3100-3125</button>
+<button class="word-select-btn" data-count="126">3125-3150</button>
+<button class="word-select-btn" data-count="127">3150-3175</button>
+<button class="word-select-btn" data-count="128">3175-3200</button>
+<br>
+<button class="word-select-btn" data-count="129">3200-3225</button>
+<button class="word-select-btn" data-count="130">3225-3250</button>
+<button class="word-select-btn" data-count="131">3250-3275</button>
+<button class="word-select-btn" data-count="132">3275-3300</button>
+<button class="word-select-btn" data-count="133">3300-3325</button>
+<button class="word-select-btn" data-count="134">3325-3350</button>
+<button class="word-select-btn" data-count="135">3350-3375</button>
+<button class="word-select-btn" data-count="136">3375-3400</button>
+<br>
+<button class="word-select-btn" data-count="137">3400-3425</button>
+<button class="word-select-btn" data-count="138">3425-3450</button>
+<button class="word-select-btn" data-count="139">3450-3475</button>
+<button class="word-select-btn" data-count="140">3475-3500</button>
+<button class="word-select-btn" data-count="141">3500-3525</button>
+<button class="word-select-btn" data-count="142">3525-3550</button>
+<button class="word-select-btn" data-count="143">3550-3575</button>
+<button class="word-select-btn" data-count="144">3575-3600</button>
+<br>
+<button class="word-select-btn" data-count="145">3600-3625</button>
+<button class="word-select-btn" data-count="146">3625-3650</button>
+<button class="word-select-btn" data-count="147">3650-3675</button>
+<button class="word-select-btn" data-count="148">3675-3700</button>
+<button class="word-select-btn" data-count="149">3700-3725</button>
+<button class="word-select-btn" data-count="150">3725-3750</button>
+<button class="word-select-btn" data-count="151">3750-3775</button>
+<button class="word-select-btn" data-count="152">3775-3800</button>
+<br>
+<button class="word-select-btn" data-count="153">3800-3825</button>
+<button class="word-select-btn" data-count="154">3825-3850</button>
+<button class="word-select-btn" data-count="155">3850-3875</button>
+<button class="word-select-btn" data-count="156">3875-3900</button>
+<button class="word-select-btn" data-count="157">3900-3925</button>
+<button class="word-select-btn" data-count="158">3925-3950</button>
+<button class="word-select-btn" data-count="159">3950-3975</button>
+<button class="word-select-btn" data-count="160">3975-4000</button>
+<br>
+<button class="word-select-btn" data-count="161">4000-4025</button>
+<button class="word-select-btn" data-count="162">4025-4050</button>
+<button class="word-select-btn" data-count="163">4050-4075</button>
+<button class="word-select-btn" data-count="164">4075-4100</button>
+<button class="word-select-btn" data-count="165">4100-4125</button>
+<button class="word-select-btn" data-count="166">4125-4150</button>
+<button class="word-select-btn" data-count="167">4150-4175</button>
+<button class="word-select-btn" data-count="168">4175-4200</button>
+<br>
+<button class="word-select-btn" data-count="169">4200-4225</button>
+<button class="word-select-btn" data-count="170">4225-4250</button>
+<button class="word-select-btn" data-count="171">4250-4275</button>
+<button class="word-select-btn" data-count="172">4275-4300</button>
+<button class="word-select-btn" data-count="173">4300-4325</button>
+<button class="word-select-btn" data-count="174">4325-4350</button>
+<button class="word-select-btn" data-count="175">4350-4375</button>
+<button class="word-select-btn" data-count="176">4375-4400</button>
+<br>
+<button class="word-select-btn" data-count="177">4400-4425</button>
+<button class="word-select-btn" data-count="178">4425-4450</button>
+<button class="word-select-btn" data-count="179">4450-4475</button>
+<button class="word-select-btn" data-count="180">4475-4500</button>
+<button class="word-select-btn" data-count="181">4500-4525</button>
+<button class="word-select-btn" data-count="182">4525-4550</button>
+<button class="word-select-btn" data-count="183">4550-4575</button>
+<button class="word-select-btn" data-count="184">4575-4600</button>
+<br>
+<button class="word-select-btn" data-count="185">4600-4625</button>
+<button class="word-select-btn" data-count="186">4625-4650</button>
+<button class="word-select-btn" data-count="187">4650-4675</button>
+<button class="word-select-btn" data-count="188">4675-4700</button>
+<button class="word-select-btn" data-count="189">4700-4725</button>
+<button class="word-select-btn" data-count="190">4725-4750</button>
+<button class="word-select-btn" data-count="191">4750-4775</button>
+<button class="word-select-btn" data-count="192">4775-4800</button>
+<br>
+<button class="word-select-btn" data-count="193">4800-4825</button>
+<button class="word-select-btn" data-count="194">4825-4850</button>
+<button class="word-select-btn" data-count="195">4850-4875</button>
+<button class="word-select-btn" data-count="196">4875-4900</button>
+<button class="word-select-btn" data-count="197">4900-4902</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

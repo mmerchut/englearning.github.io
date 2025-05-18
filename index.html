@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsywne Poziome Menu</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesmenu.css">
+    <link rel="stylesheet" href="words/styleswords.css">
 </head>
 <body>
-    <nav>
+
+     <header>
+        <input id="burger" type="checkbox" />
+        <label for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="tenses/tensesMenu/index.html">Czasy Ang</a></li>
+            <li><a href="words/WordsMenu/index.html">Słownictwo</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <nav class="navlevel">
+    <div>
+        <h2 class="level-title">Czego chcesz się nauczyć?</h2>
         <ul class="horizontal-menu">
             <li><a href="words/WordsMenu/index.html">Słownictwo</a></li>
-            <li><a href="Phrases/index.html">Zwroty</a></li>
-            <li><a href="tenses/index.html">Czasy</a></li>
-            <li><a href="Financial/account/index.html">Terminy księgowe</a></li>
-            <li><a href="Financial/investing/index.html">Terminy inwestycyjne</a></li>
-            <li><a href="Financial/instruments/index.html">Instrumenty</a></li>
-            <li><a href="Financial/polite/index.html">Polite</a></li>
+            <li><a href="tenses/tensesMenu/index.html">Czasy angielskie</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
 </body>
 </html>
