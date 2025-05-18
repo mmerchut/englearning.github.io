@@ -2350,18 +2350,18 @@ function displayWord() {
     userInput.value = '';
     result.textContent = '';
     errorShown = false;
-    speakWord();
+    // speakWord();
 
     const correctTranslation = isEnglishToPolish ? selectedWords[currentIndex].polish : selectedWords[currentIndex].english;
     translationDisplay.textContent = correctTranslation;
 }
 
-function speakWord() {
-    const currentWord = wordDisplay.textContent;
-    const utterance = new SpeechSynthesisUtterance(currentWord);
-    utterance.lang = isEnglishToPolish ? 'en-US' : 'pl-PL';
-    window.speechSynthesis.speak(utterance);
-}
+// function speakWord() {
+//     const currentWord = wordDisplay.textContent;
+//     const utterance = new SpeechSynthesisUtterance(currentWord);
+//     utterance.lang = isEnglishToPolish ? 'en-US' : 'pl-PL';
+//     window.speechSynthesis.speak(utterance);
+// }
 
 function generateOptions(correctAnswer) {
     optionsContainer.innerHTML = '';
