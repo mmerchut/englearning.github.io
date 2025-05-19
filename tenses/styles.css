@@ -249,6 +249,10 @@ button:hover {
         margin: 20px;
         margin-top: 100px;
     }
+
+    body {
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    }
 }
 
 #type-info {

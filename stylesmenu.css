@@ -62,6 +62,9 @@ body {
 
 /* Media Queries dla responsywności */
 @media (max-width: 600px) {
+    body {
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    }
     .horizontal-menu {
         flex-direction: column; /* Zmiana na kolumnę w mniejszych ekranach */
         align-items: center; /* Wyśrodkowanie elementów */

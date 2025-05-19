@@ -25,6 +25,10 @@ body {
         margin: 10px 0;
     }
 
+    body {
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    }
+
     #wordList {
       margin-top: 300px;
       font-family: "Lato";
