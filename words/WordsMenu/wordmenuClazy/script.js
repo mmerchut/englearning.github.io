@@ -1959,7 +1959,6 @@ const words = [
  
 
 ];
-
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("togglerange");
     const input = document.getElementById("wordCountInput");
@@ -1968,6 +1967,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleBtn.addEventListener("click", () => {
         input.classList.toggle("hidden");
+
+        // Jeśli autoMode jest włączone, zatrzymaj i zmień ikonę
+        if (autoMode) {
+            stopAutoLearning();
+            toggleAutoBtn.innerHTML = '<i class="fa-solid fa-play"></i>'; // ustaw ikonę na "start"
+        }
     });
 
     // Zainicjalizuj aplikację po załadowaniu
