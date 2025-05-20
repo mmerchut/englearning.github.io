@@ -2312,14 +2312,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     input.classList.add("hidden");
 
-   toggleBtn.addEventListener("click", () => {
-    input.classList.toggle("hidden");
-
-    if (autoMode) {
-        stopAutoLearning();
-        toggleAutoBtn.innerHTML = '<i class="fa-solid fa-play"></i>'; // Zmień ikonę na start
-    }
-});
+    toggleBtn.addEventListener("click", () => {
+        input.classList.toggle("hidden");
+    });
 
     // Zainicjalizuj aplikację po załadowaniu
     initApp();
