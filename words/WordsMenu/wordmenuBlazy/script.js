@@ -4905,16 +4905,32 @@ const words = [
 
 ];
 
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("togglerange");
+    const input = document.getElementById("wordCountInput");
+
+    input.classList.add("hidden");
+
+    toggleBtn.addEventListener("click", () => {
+        input.classList.toggle("hidden");
+    });
+
+    // Zainicjalizuj aplikację po załadowaniu
+    initApp();
+});
+
 let selectedWords = [];
 let currentIndex = 0;
 let isEnglishToPolish = true;
 let autoMode = false;
 let intervalId = null;
 
+// Załaduj dane DOM
 const wordDisplay = document.getElementById('wordDisplay');
 const translationDisplay = document.getElementById('translationDisplay');
 const toggleAutoBtn = document.getElementById('toggleAutoBtn');
 const wordCountInput = document.getElementById('wordCountInput');
+
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -4937,7 +4953,7 @@ function displayWord() {
 function startAutoLearning() {
     if (intervalId) clearInterval(intervalId);
     displayWord();
-    intervalId = setInterval(displayWord, 2000); // co 4 sekundy
+    intervalId = setInterval(displayWord, 2000);
     autoMode = true;
 }
 
@@ -4952,17 +4968,32 @@ toggleAutoBtn.addEventListener('click', () => {
 
     const shuffled = [...words];
     shuffle(shuffled);
-    selectedWords = shuffled.slice(0, count);
+
+    selectedWords = isNaN(count) || count < 1 ? shuffled : shuffled.slice(0, count);
     shuffle(selectedWords);
 
     currentIndex = 0;
-    startAutoLearning();
 
-    // Wyczyść placeholder i input
-    wordCountInput.placeholder = "";
+    if (autoMode) {
+        stopAutoLearning();
+        toggleAutoBtn.innerHTML = '<i class="fa-solid fa-play"></i>'; // Zmień na play
+    } else {
+        startAutoLearning();
+        toggleAutoBtn.innerHTML = '<i class="fa-solid fa-stop"></i>'; // Zmień na stop
+    }
+
+    // Usuń tylko wartość, placeholder zostaje
+    // wordCountInput.placeholder = ""; // <-- tutaj nic nie rób
     wordCountInput.value = "";
+
+    wordCountInput.classList.add("hidden");
 });
 
-
-// Inicjalizacja
-translationDisplay.style.display = 'block';
+// 🟢 Inicjalizacja po załadowaniu
+function initApp() {
+    selectedWords = [...words];
+    shuffle(selectedWords);
+    currentIndex = 0;
+    displayWord(); // Wyświetl od razu 1 słowo
+    translationDisplay.style.display = 'block';
+}
